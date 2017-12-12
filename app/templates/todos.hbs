@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+      <h2>Todos</h2>
+      <ul class="list-group">
+        {{#each model as |todo|}}
+          {{#link-to 'todos.edit' todo}}
+            <li class="list-group-item {{if todo.isCompleted 'completed'}}">{{todo.title}}</li>
+          {{/link-to}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm-5">
+      {{outlet}}
+    </div>
+  </div>
+</div>

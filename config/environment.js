@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'todo-app',
+    modulePrefix: 'todos-app',
     environment,
     rootURL: '/',
     locationType: 'auto',

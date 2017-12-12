@@ -1,0 +1,14 @@
+<div class="form-group">
+	<div clss="col-sm-3">
+		<label for="title">Title:</label>
+    {{input value=todo.title id="title"}}
+	</div>
+</div>
+<div class="form-group">
+	<div clss="col-sm-3">
+		<label for="completed">Completed:</label>
+    {{input type='checkbox' checked=todo.isCompleted id="completed"}}
+	</div>
+</div>
+<button class="btn btn-success" {{action "save" todo}}>Save Todo</button>
+{{yield}}

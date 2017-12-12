@@ -1,7 +1,9 @@
-# todo-app
+# Todos App
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+
+This app utilizes ember-localstorage and ember-bootstrap (bootstrap 4). 
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd todo-app`
+* `cd todos-app`
 * `npm install`
 
 ## Running / Development
