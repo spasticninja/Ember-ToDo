@@ -11,13 +11,13 @@
 		{{input type='checkbox' checked=todo.isCompleted id="completed"}}
 	</div>
 </div>
-<button class="btn btn-danger" {{action "confirm"}}>Remove Todo</button>
-<button class="btn btn-primary" {{action "save" todo}}>Save Todo</button>
+<button class="btn btn-danger" {{action "confirm"}}>{{fa-icon "trash" ariaLabel="Remove Todo"}}</button>
+<button class="btn btn-primary" {{action "save" todo}}>{{fa-icon "floppy-o" ariaLabel="Save Todo"}}</button>
 
 {{#if hasConfirmed}}
 	<div class="confirm-remove">
 		<h2>Are you sure?</h2>
-		<button class="btn btn-danger" {{action "remove" todo}}>Remove Todo</button>
+		<button class="btn btn-danger" {{action "remove" todo}}>{{fa-icon "trash"}} Delete todo</button>
 	</div>
 {{/if}}
 

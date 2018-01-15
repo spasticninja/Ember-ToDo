@@ -3,7 +3,7 @@
     <div class="col-sm-7">
       <h2>Todos</h2>
       <p>
-        <a href="/todos/new" class="btn btn-primary text-right">Add New Todo</a>
+        <a href="/todos/new" class="btn btn-primary text-right">{{fa-icon "plus-circle" ariaLabel="Add new todo"}}</a>
       </p>
       <ul class="list-group">
         {{#each model as |todo|}}
@@ -18,7 +18,7 @@
         {{/each}}
       </ul>
       <p>
-        <a href="/todos/new" class="btn btn-primary text-right">Add New Todo</a>
+        <a href="/todos/new" class="btn btn-primary text-right">{{fa-icon "plus-circle" ariaLabel="Add new todo"}}</a>
       </p>
     </div>
     <div class="col-sm-5">

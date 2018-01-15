@@ -1,7 +1,6 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  hasConfirmed: false,
   actions: {
     save: function(model) {
       model.save().then(() => {
@@ -13,9 +12,6 @@ export default Component.extend({
         todo.destroyRecord();
         this.sendAction('handleRedirect');
       });
-    },
-    confirm: function() {
-      this.toggleProperty('hasConfirmed');
     }
   }
 });
