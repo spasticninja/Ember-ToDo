@@ -1,0 +1,11 @@
+<div class="form-group">
+  <h2>Are you sure?</h2>
+	<div clss="col-sm-3">
+		<p>Title: {{todo.title}}</p>
+		<p>Completed: {{todo.isCompleted}}</p>
+	</div>
+</div>
+<button class="btn btn-danger" {{action "remove" todo}}>Remove Todo</button>
+<!-- <button class="btn btn-primary" {{action "back"}}>Go Back</button> -->
+<a class="btn btn-primary" href="/todos">Go Back</a>
+{{yield}}

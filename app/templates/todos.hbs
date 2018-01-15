@@ -2,13 +2,24 @@
   <div class="row">
     <div class="col-sm-7">
       <h2>Todos</h2>
+      <p>
+        <a href="/todos/new" class="btn btn-primary text-right">Add New Todo</a>
+      </p>
       <ul class="list-group">
         {{#each model as |todo|}}
-          {{#link-to 'todos.edit' todo}}
-            <li class="list-group-item {{if todo.isCompleted 'completed'}}">{{todo.title}}</li>
-          {{/link-to}}
+          <li class="list-group-item {{if todo.isCompleted 'completed'}}">
+            {{#link-to 'todos.edit' todo}}
+              {{todo.title}}
+            {{/link-to}}
+            {{#link-to 'todos.remove' todo class="float-right"}}
+              X
+            {{/link-to}}
+          </li>
         {{/each}}
       </ul>
+      <p>
+        <a href="/todos/new" class="btn btn-primary text-right">Add New Todo</a>
+      </p>
     </div>
     <div class="col-sm-5">
       {{outlet}}

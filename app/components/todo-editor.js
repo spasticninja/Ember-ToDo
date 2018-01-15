@@ -1,15 +1,25 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  routing: Ember.inject.service('-routing'),
+  hasConfirmed: false,
   actions: {
     save: function(model) {
       model.save().then(() => {
-        console.log('Todo Saved');
         this.sendAction('handleRedirect');
-      }).then(() => {
-        this.redirect();
+      // }).then(() => {
+      //   this.redirect();
       });
+    },
+    remove: function(model) {
+      model.get('store').findRecord('todo', model.id).then((todo) => {
+        todo.destroyRecord();
+        this.sendAction('handleRedirect');
+      // }).then(() => {
+      //   this.redirect();
+      });
+    },
+    confirm: function() {
+      this.toggleProperty('hasConfirmed');
     }
   },
   redirect: function() {

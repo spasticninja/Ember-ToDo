@@ -1,14 +1,24 @@
+<h2>Enter your Todo</h2>
 <div class="form-group">
 	<div clss="col-sm-3">
 		<label for="title">Title:</label>
-    {{input value=todo.title id="title"}}
+		{{input value=todo.title id="title"}}
 	</div>
 </div>
 <div class="form-group">
 	<div clss="col-sm-3">
 		<label for="completed">Completed:</label>
-    {{input type='checkbox' checked=todo.isCompleted id="completed"}}
+		{{input type='checkbox' checked=todo.isCompleted id="completed"}}
 	</div>
 </div>
-<button class="btn btn-success" {{action "save" todo}}>Save Todo</button>
+<button class="btn btn-danger" {{action "confirm"}}>Remove Todo</button>
+<button class="btn btn-primary" {{action "save" todo}}>Save Todo</button>
+
+{{#if hasConfirmed}}
+	<div class="confirm-remove">
+		<h2>Are you sure?</h2>
+		<button class="btn btn-danger" {{action "remove" todo}}>Remove Todo</button>
+	</div>
+{{/if}}
+
 {{yield}}
